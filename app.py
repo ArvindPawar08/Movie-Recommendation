@@ -47,7 +47,7 @@ def get_recommendations(title, cosine_sim=cosine_simi()):
 	    # Return the top 10 most similar movies
 	    #return df['title'].iloc[movie_indices]
 
-
+#comment
 	    # making an empty list that will containg all 10 movie recommendations
 	    l = []
 	    for i in range(len(sim_scores)):
