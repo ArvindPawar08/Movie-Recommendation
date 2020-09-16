@@ -12,7 +12,7 @@ import sys
 from sklearn.metrics.pairwise import linear_kernel
 
 def cosine_simi():
-    df = pd.read_csv('/Users/arvindpawar/Desktop/Recommendation-Sys/data.csv')
+    df = pd.read_csv('data.csv')
     tfidf = TfidfVectorizer(stop_words='english')
     #Replace NaN with an empty string
     df['overview'] = df['overview'].fillna('')
@@ -23,7 +23,7 @@ def cosine_simi():
     return cosine_sim
 
 def get_recommendations(title, cosine_sim=cosine_simi()):
-    df = pd.read_csv('/Users/arvindpawar/Desktop/Recommendation-Sys/data.csv')
+    df = pd.read_csv('data.csv')
 
     if title not in df['title'].unique():
         return('This movie is not in our database.\nPlease check if you spelled it correct.')
